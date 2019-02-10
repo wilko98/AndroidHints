@@ -14,7 +14,7 @@ import com.example.wilko98.androidhints.R;
 
 public class TopicsFragment extends Fragment {
 
-    String[] topics = new String[]{"Android Studio shortcuts","Android Jetpak","Android Version","Java","Kotlin"};
+    String[] topics = new String[]{"Android Studio shortcuts","Android Jetpaсk","Android Version","Java","Kotlin"};
 
     public static TopicsFragment newInstance() {
         Bundle args = new Bundle();
@@ -22,6 +22,8 @@ public class TopicsFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -32,7 +34,8 @@ public class TopicsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View v, @Nullable Bundle savedInstanceState) {
         ArrayAdapter adapter = new ArrayAdapter<String>(getContext(),R.layout.li_topics,topics);
-        ListView listView = (ListView) v.findViewById(R.id.topicsList);
+        ListView listView =  v.findViewById(R.id.topicsList);
         listView.setAdapter(adapter);
     }
+    
 }
